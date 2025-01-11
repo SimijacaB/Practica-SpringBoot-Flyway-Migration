@@ -1,0 +1,10 @@
+services:
+  mysql:
+    image: 'mysql:latest'
+    environment:
+      MYSQL_ROOT_PASSWORD: 1998
+      MYSQL_DATABASE: flyway_db
+      MYSQL_USER: ysimijaca
+      MYSQL_PASSWORD: toor
+    ports:
+      - "3308:3306"
