@@ -1,10 +1,12 @@
 services:
   mysql:
-    image: 'mysql:latest'
+    #Se agrega un nuevo servidor en el puerto 3309 para mysql, ya que los anteriores tenían una versión superior a la 8.0 y
+    # flyway no estaba siendo compatible, por esa razón no se usa la última versión
+    image: 'mysql:8.0.40'
     environment:
       MYSQL_ROOT_PASSWORD: 1998
       MYSQL_DATABASE: flyway_db
-      MYSQL_USER: ysimijaca
+      MYSQL_USER: simijaca
       MYSQL_PASSWORD: toor
     ports:
-      - "3308:3306"
+      - "3309:3306"
